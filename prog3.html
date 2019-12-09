@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<p id ="t"></p>
+		<script>	
+			var x = setInterval(inc,100);
+			var size = 5;
+			function inc()
+			{
+				t.innerHTML = "Text Growing";
+				t.style.fontSize = size;
+				size += 5;
+				if(size > 50)
+				{
+					window.clearTimeout(x);
+					x = setInterval(dec,100);
+				}
+			}
+			function dec()
+			{
+				t.innerHTML = "Text Shrinking";
+				t.style.fontSize = size;
+				size -= 5;
+			}
+			
+		</script>
+	<body>
+</html>

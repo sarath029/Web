@@ -1,0 +1,36 @@
+<html>	
+	<body>
+		<script>
+			var x = prompt("Enter the Input");
+			if(isNaN(x)){			
+				x = x.toUpperCase();
+				var i
+				for( i = 0; i < x.length ; i++)
+				{
+					var chr = x.charAt(i);
+					if(chr == 'A' ||chr == 'E' ||chr == 'I' ||chr == 'O' ||chr == 'U')
+					{
+						break;
+					}
+				}
+				alert('Vowel pos:' + i)
+			}	
+			else 
+			{
+				var num = parseInt(x);
+				alert(num);
+				var rev = 0,rem;				
+				while(num != 0)
+				{	
+					rem = num%10;
+					num = parseInt(num/10);
+					rev = 10*rev+rem;
+					alert(rev);
+				}
+				alert(rev);
+				
+			}
+					
+		</script>
+	</body>
+</html>
